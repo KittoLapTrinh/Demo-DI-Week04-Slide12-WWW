@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="a1" class="vn.edu.iuh.fit.models.Address">
+        <property name="street" value="12 Nguyen Van Bao"/>
+        <property name="city" value="Sai Gon"/>
+        <property name="country" value="Viet Nam"/>
+    </bean>
+    <bean id="a2" class="vn.edu.iuh.fit.models.Address">
+        <property name="street" value="30 Nguyen Van Luong"/>
+        <property name="city" value="Sai Gon"/>
+        <property name="country" value="Viet Nam"/>
+    </bean>
+
+    <bean id="p1" class="vn.edu.iuh.fit.models.Person">
+        <property name="name" value="Duong Tuan Kiet"/>
+        <property name="addresses"  >
+            <list>
+                <ref bean="a1"/>
+                <ref bean="a2"/>
+            </list>
+        </property>
+        <property name="emails" >
+            <list>
+                <value>duongtuankietpqbt@gmail.com</value>
+                <value>huynletamnhu@gmail.com</value>
+            </list>
+        </property>
+    </bean>
+</beans>
